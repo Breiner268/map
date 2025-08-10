@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(237deg, #008ba9, #ffde59);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header {
+    background: #fbd43b;
+    color: #0ea3c1;
+    padding: 12.5px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    
+}
+
+.header h1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    font-family: "Sour Gummy", sans-serif;
+}
+.header h1 span {
+    font-family: "DynaPuff", system-ui;
+}
+
+.container {
+    height: calc(100vh - 71px);
+    position: relative;
+    overflow: hidden;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.airport-marker {
+    width: 20px;
+    height: 20px;
+    background: #00ff88;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+    animation: pulse 2s infinite;
+    transform: translate(-50%, -50%);
+}
+/* Filtro */
+
+.filter-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.filter-label {
+    color: white;
+    font-weight: 600;
+    margin-right: 12px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+.filter-btn.active {
+    background: rgba(106, 90, 205, 0.8);
+    border-color: rgba(106, 90, 205, 1);
+    box-shadow: 0 4px 12px rgba(106, 90, 205, 0.3);
+}
+
+.filter-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 20px rgba(0, 255, 136, 0.6); }
+    50% { box-shadow: 0 0 30px rgba(0, 255, 136, 0.8), 0 0 40px rgba(0, 255, 136, 0.4); }
+    100% { box-shadow: 0 0 20px rgba(0, 255, 136, 0.6); }
+}
+
+.airport-marker:hover {
+    transform: scale(1.3) translate(-38%, -38%);
+    background: #ff6b00;
+    box-shadow: 0 0 30px rgba(255, 107, 0, 0.8);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 5% auto;
+    padding: 0;
+    border: none;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease-out;
+}
+
+
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 15px 15px 0 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.close {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #ff6b00;
+}
+
+.modal-body {
+    padding: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.destination-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.destination-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.destination-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.destination-name {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.destination-code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.destination-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 0.9em;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.8;
+}
+
+.stats {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    z-index: 500;
+}
+
+.stats h3 {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.stats p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.leaflet-control-attribution {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .filter-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-label {
+        margin-bottom: 8px;
+        margin-right: 0;
+    }
+    
+    .filter-btn {
+        justify-content: center;
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-container {
+        padding: 12px;
+    }
+    
+    .filter-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    
+    .filter-icon {
+        width: 14px;
+        height: 14px;
+    }
+}

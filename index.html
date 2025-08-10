@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Radar - Aeropuertos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Mapa de Aeropuertos <span>VIVA</span></h1>
+        <!-- <p>Haz clic en cualquier aeropuerto para ver destinos disponibles</p> -->
+    </div>
+
+    <div class="container">
+        <div id="map"></div>
+
+        <div class="stats">
+            <h3>📊 Estadísticas</h3>
+            <p>🏢 Aeropuertos: <span id="airportCount">0</span></p>
+            <p>🌍 Rutas totales: <span id="routeCount">0</span></p>
+            <p>🎯 Seleccionado: <span id="selectedAirport">Ninguno</span></p>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="airportModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Destinos desde Aeropuerto</h2>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            
+            <!-- Filtros -->
+            <div class="filter-container">
+                <div class="filter-group">
+                    <span class="filter-label">Ordenar por:</span>
+                    <button class="filter-btn active" data-filter="default">
+                        <svg class="filter-icon" viewBox="0 0 24 24">
+                            <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/>
+                        </svg>
+                        Original
+                    </button>
+                    <button class="filter-btn" data-filter="distance-asc">
+                        <svg class="filter-icon" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            <path d="M7 14l5 5 5-5z"/>
+                        </svg>
+                        Menor distancia
+                    </button>
+                    <button class="filter-btn" data-filter="distance-desc">
+                        <svg class="filter-icon" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            <path d="M7 10l5-5 5 5z"/>
+                        </svg>
+                        Mayor distancia
+                    </button>
+                    <button class="filter-btn" data-filter="time-asc">
+                        <svg class="filter-icon" viewBox="0 0 24 24">
+                            <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z"/>
+                            <path d="M7 14l5 5 5-5z"/>
+                        </svg>
+                        Menor tiempo
+                    </button>
+                    <button class="filter-btn" data-filter="time-desc">
+                        <svg class="filter-icon" viewBox="0 0 24 24">
+                            <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z"/>
+                            <path d="M7 10l5-5 5 5z"/>
+                        </svg>
+                        Mayor tiempo
+                    </button>
+                </div>
+            </div>
+            
+            <div class="modal-body">
+                <div id="destinationsContainer" class="destinations-grid">
+                    <!-- Destinations will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

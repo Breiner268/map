@@ -350,6 +350,7 @@ const airports = {
         name: 'Barcelona - El Prat',
         coords: [41.2974, 2.0833],
         destinations: [
+
         // New destinations
             { code: 'MDE', name: 'Medellín - José María Córdova', distance: 4762, flightTime: 10.34, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'BOG', name: 'Bogotá - El Dorado', distance: 4684, flightTime: 9.58, showFromDateUTC: '2025-09-01T00:00:00Z' },
@@ -360,8 +361,10 @@ const airports = {
         name: 'Madrid - Barajas',
         coords: [40.4936, -3.5668],
         destinations: [
+        
+            { code: 'MDE', name: 'Medellín - José María Córdova', distance: 4413, flightTime: 9.33 },
+        
         // New destinations
-            { code: 'MDE', name: 'Medellín - José María Córdova', distance: 4413, flightTime: 9.33, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'BOG', name: 'Bogotá - El Dorado', distance: 4398, flightTime: 9.20, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'CLO', name: 'Cali - Alfonso Bonilla Aragón', distance: 4578, flightTime: 9.45, showFromDateUTC: '2025-09-01T00:00:00Z' }
         ]},

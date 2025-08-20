@@ -356,7 +356,7 @@ const airports = {
             { code: 'BOG', name: 'Bogotá - El Dorado', distance: 4684, flightTime: 9.58, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'CLO', name: 'Cali - Alfonso Bonilla Aragón', distance: 4947, flightTime: 10.50, showFromDateUTC: '2025-09-01T00:00:00Z' },
         ]},   
-
+*/
     'LEMD': {
         name: 'Madrid - Barajas',
         coords: [40.4936, -3.5668],
@@ -368,7 +368,7 @@ const airports = {
             { code: 'BOG', name: 'Bogotá - El Dorado', distance: 4398, flightTime: 9.20, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'CLO', name: 'Cali - Alfonso Bonilla Aragón', distance: 4578, flightTime: 9.45, showFromDateUTC: '2025-09-01T00:00:00Z' }
         ]},
-*/
+/*
     'MDPC': {
         name: 'Punta Cana - Punta Cana International',
         coords: [18.5674, -68.3636],

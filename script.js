@@ -317,7 +317,8 @@ const airports = {
         destinations: [
         // News destinations
             { code: 'BOG', name: 'Bogotá - El Dorado', distance: 4896, flightTime: 10.12, showFromDateUTC: '2025-09-1T09:23:00Z' },       
-            { code: 'MDE', name: 'Medellín - José María Córdova', distance: 4802, flightTime: 10.09, showFromDateUTC: '2025-09-1T09:23:00Z' }
+            { code: 'MDE', name: 'Medellín - José María Córdova', distance: 4802, flightTime: 10.09, showFromDateUTC: '2025-09-1T09:23:00Z' },
+            { code: 'CLO', name: 'Cali - Alfonso Bonilla Aragón', distance: 4660, flightTime: 10.05, showFromDateUTC: '2025-09-1T09:23:00Z' } // Added
         ]},
     
     'KJFK': {
@@ -339,7 +340,8 @@ const airports = {
             { code: 'MDE', name: 'Medellín - José María Córdova', distance: 2998, flightTime: 6.33, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'BOG' , name: 'Bogotá - El Dorado', distance: 3128, flightTime: 6.38, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'CLO', name: 'Cali - Alfonso Bonilla Aragón', distance: 3015, flightTime: 6.36, showFromDateUTC: '2025-09-01T00:00:00Z' },
-            { code: 'CTG', name: 'Cartagena - Rafael Núñez', distance: 2785, flightTime: 6.25, showFromDateUTC: '2025-09-01T00:00:00Z' } //added
+            { code: 'CTG', name: 'Cartagena - Rafael Núñez', distance: 2785, flightTime: 6.25, showFromDateUTC: '2025-09-01T00:00:00Z' }, //added
+            { code: 'SIN', name: 'Singapore Changi', distance: 15300, flightTime: 19, showFromDateUTC: '2025-09-01T00:00:00Z' } // added
         ]},
 
     'KMCO': {
@@ -540,7 +542,25 @@ const airports = {
         // New destinations
             { code: 'MDE', name: 'Medellín - José María Córdova', distance: 5200, flightTime: 11.2, showFromDateUTC: '2025-09-01T00:00:00Z' },// Added
             { code: 'BOG', name: 'Bogotá - El Dorado', distance: 5100, flightTime: 10.8, showFromDateUTC: '2025-09-01T00:00:00Z' },// Added
-        ]}
+        ]},
+
+    'LTFM': {
+        name: 'Istanbul - Istanbul Airport',
+        coords: [41.2753, 28.7519],
+        destinations: [
+        // New destinations
+            { code: 'MDE', name: 'Medellín - José María Córdova', distance: 10500, flightTime: 12.5, showFromDateUTC: '2025-09-01T00:00:00Z' },// Added
+            { code: 'BOG', name: 'Bogotá - El Dorado', distance: 10400, flightTime: 12, showFromDateUTC: '2025-09-01T00:00:00Z' },// Added
+            { code: 'CLO', name: 'Cali - Alfonso Bonilla Aragón', distance: 10600, flightTime: 12.5, showFromDateUTC: '2025-09-01T00:00:00Z' } // Added
+        ]},
+
+    'WSSS': {
+        name: 'Singapore - Changi Airport',
+        coords: [1.3644, 103.9915],
+        destinations: [
+        // New destinations
+            { code: 'LAX', name: 'Los Angeles - Los Angeles International', distance: 14100, flightTime: 17, showFromDateUTC: '2025-09-01T00:00:00Z' } // Added
+        ]},
 };
 
 let map;

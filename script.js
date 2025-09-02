@@ -24,6 +24,11 @@ const airports = {
             { code: 'UIO', name: 'Pereira - Matecaña', distance: 150, flightTime: 0.26 },
 
         //News destinations        
+            { code: 'VUP', name: 'Valledupar - Alfonso López Pumarejo', distance: 370, flightTime: 0.6, showFromDateUTC: '2025-09-01T00:00:00Z' }, // Added
+            { code: 'PAS', name: 'Pasto - Antonio Nariño', distance: 454, flightTime: 1.2, showFromDateUTC: '2025-09-01T00:00:00Z' }, // Added
+            { code: 'NVA', name: 'Neiva - Benito Salas', distance: 198, flightTime: 0.30, showFromDateUTC: '2025-09-01T00:00:00Z' },
+
+            { code: 'CUZ', name: 'Cusco - Alejandro Velasco Astete International', distance: 1080, flightTime: 2.32, showFromDateUTC: '2025-09-01T00:00:00Z' }, // Added
             { code: 'BCN', name: 'Barcelona - El Prat', distance: 4711, flightTime: 9.35, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'CCS', name: 'Caracas - Simón Bolívar International', distance: 575, flightTime: 1.35, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'GRU', name: 'São Paulo - Guarulhos International', distance: 2429, flightTime: 4.57, showFromDateUTC: '2025-09-01T00:00:00Z' },
@@ -34,10 +39,10 @@ const airports = {
             { code: 'MEX', name: 'México - Benito Juárez International', distance: 1782, flightTime: 4, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'MIA', name: 'Miami International', distance: 1367, flightTime: 3.10, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'MUN', name: 'Cancún International', distance: 1298, flightTime: 3.02, showFromDateUTC: '2025-09-01T00:00:00Z' },
-            { code: 'NVA', name: 'Neiva - Benito Salas', distance: 198, flightTime: 0.30, showFromDateUTC: '2025-09-01T00:00:00Z' },
+            { code: 'CDG', name: 'Paris - Charles de Gaulle Airport', distance: 4736, flightTime: 9.4, showFromDateUTC: '2025-09-01T00:00:00Z' },// Added
             { code: 'PMV', name: 'Porlamar - Santiago Mariño International', distance: 764, flightTime: 2.04, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'PTY', name: 'Panamá - Tocumen International', distance: 428, flightTime: 1.10, showFromDateUTC: '2025-09-01T00:00:00Z' },
-            { code: 'SDQ', name: 'Santo Domingo - Las Américas International', distance: 886, flightTime: 2.12, showFromDateUTC: '2025-09-01T00:00:00Z' },
+            { code: 'PUJ', name: 'Punta Cana International', distance: 1012, flightTime: 2.36, showFromDateUTC: '2025-09-01T00:00:00Z' } // Added
         ]},
     
     'SKRG': {
@@ -70,7 +75,10 @@ const airports = {
             { code: 'VUP', name: 'Valledupar - Alfonso López Pumarejo', distance: 292, flightTime: 0.57 },
             { code: 'VVC', name: 'Villavicencio - Vanguardia', distance: 203, flightTime: 0.45 },
 
-        // New destinations            
+        // New destinations          
+            { code: 'NVA', name: 'Neiva - Benito Salas', distance: 150, flightTime: 0.33, showFromDateUTC: '2025-09-01T00:00:00Z' }, // Added
+            { code: 'CUZ', name: 'Cusco - Alejandro Velasco Astete International', distance: 1570, flightTime: 3.5, showFromDateUTC: '2025-09-01T00:00:00Z' },// Added
+            { code: 'CDG', name: 'Paris - Charles de Gaulle Airport', distance: 4650, flightTime: 9.2, showFromDateUTC: '2025-09-01T00:00:00Z' },// Added
             { code: 'BCN', name: 'Barcelona - El Prat', distance: 7200, flightTime: 14, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'CCS', name: 'Caracas - Simón Bolívar International', distance: 2100, flightTime: 4.5, showFromDateUTC: '2025-09-01T00:00:00Z' },            
             { code: 'LAX', name: 'Los Angeles International', distance: 5650, flightTime: 11, showFromDateUTC: '2025-09-01T00:00:00Z' },
@@ -92,6 +100,8 @@ const airports = {
             { code: 'SMR', name: 'Santa Marta - Simón Bolívar', distance: 477, flightTime: 1.16 },
 
         // New destinations
+
+            { code: 'CUZ', name: 'Cusco - Alejandro Velasco Astete International', distance: 1200, flightTime: 2.5, showFromDateUTC: '2025-09-01T00:00:00Z' }, // Added
             { code: 'EZE', name: 'Buenos Aires - Ezeiza International', distance: 2558, flightTime: 6.01, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'BCN', name: 'Barcelona - El Prat', distance: 4836, flightTime: 10.26, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'CCS', name: 'Caracas - Simón Bolívar International', distance: 718, flightTime: 1.55, showFromDateUTC: '2025-09-01T00:00:00Z' },
@@ -122,6 +132,7 @@ const airports = {
             { code: 'NVA', name: 'Neiva - Benito Salas', distance: 461, flightTime: 1.15 },
             { code: 'PSO', name: 'Pasto - Antonio Nariño', distance: 575, flightTime: 1.35 },
             { code: 'PEI', name: 'Pereira - Matecaña', distance: 377, flightTime: 1.08 },
+            { code: 'AXM', name: 'Armenia - El Edén', distance: 378, flightTime: 1.1 },
 
         // New destinations
             { code: 'AMS', name: 'Amsterdam - Schiphol', distance: 4660, flightTime: 10, showFromDateUTC: '2025-09-01T00:00:00Z' },
@@ -129,8 +140,8 @@ const airports = {
             { code: 'LAX', name: 'Los Angeles International', distance: 2785, flightTime: 6.25, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'MCO', name: 'Orlando International', distance: 1159, flightTime: 2.48, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'MIA', name: 'Miami International', distance: 988, flightTime: 2.26, showFromDateUTC: '2025-09-01T00:00:00Z' },
-            { code: 'PMV', name: 'Porlamar - Santiago Mariño Caribbean International', distance: 691, flightTime: 1.5, showFromDateUTC: '2025-09-01T00:00:00Z' }
-
+            { code: 'PMV', name: 'Porlamar - Santiago Mariño Caribbean International', distance: 691, flightTime: 1.5, showFromDateUTC: '2025-09-01T00:00:00Z' },
+            { code: 'PTY', name: 'Panamá - Tocumen International', distance: 600, flightTime: 1.4, showFromDateUTC: '2025-09-01T00:00:00Z'} //  Added
         ]},
 
     'SKBQ': {
@@ -222,7 +233,10 @@ const airports = {
         coords: [1.3963, -77.2915],
         destinations: [
             { code: 'CTG', name: 'Cartagena - Rafael Núñez', distance: 600, flightTime: 1.42 },
-            { code: 'MDE', name: 'Medellín - José María Córdova', distance: 310, flightTime: 1.03 }
+            { code: 'MDE', name: 'Medellín - José María Córdova', distance: 310, flightTime: 1.03 },
+
+        // New destinations
+            { code: 'BOG', name: 'Bogotá - El Dorado', distance: 248, flightTime: 0.55, showFromDateUTC: '2025-09-01T00:00:00Z' } // Added
         ]},
 
     'SKRH': {
@@ -257,7 +271,12 @@ const airports = {
             { code: 'BOG', name: 'Bogotá - El Dorado', distance: 691, flightTime: 1.44 },
             { code: 'CLO', name: 'Cali - Alfonso Bonilla Aragón', distance: 664, flightTime: 1.41 },
             { code: 'CTG', name: 'Cartagena - Rafael Núñez', distance: 401, flightTime: 1.14 },
-            { code: 'MDE', name: 'Medellín - José María Córdova', distance: 572, flightTime: 1.40 }
+            { code: 'MDE', name: 'Medellín - José María Córdova', distance: 572, flightTime: 1.40 },
+
+        // New destinations
+
+            { code: 'MIA', name: 'Miami International', distance: 1121, flightTime: 2.30, showFromDateUTC: '2025-09-01T00:00:00Z' },
+            { code: 'MCO', name: 'Orlando International', distance: 1190, flightTime: 2.45, showFromDateUTC: '2025-09-01T00:00:00Z' }
         ]},
 
     'SKVP': {
@@ -291,7 +310,7 @@ const airports = {
         ]},
     
     //International airports
-    /*
+    
     'EHAM': {
         name: 'Amsterdam - Schiphol',
         coords: [52.3086, 4.7639],
@@ -300,7 +319,7 @@ const airports = {
             { code: 'BOG', name: 'Bogotá - El Dorado', distance: 4896, flightTime: 10.12, showFromDateUTC: '2025-09-1T09:23:00Z' },       
             { code: 'MDE', name: 'Medellín - José María Córdova', distance: 4802, flightTime: 10.09, showFromDateUTC: '2025-09-1T09:23:00Z' }
         ]},
-    */
+    
     'KJFK': {
         name: 'New York - John F. Kennedy International',
         coords: [40.6413, -73.7781],
@@ -315,11 +334,12 @@ const airports = {
         name: 'Los Angeles - Los Angeles International',
         coords: [33.9416, -118.4085],
         destinations: [
-            { code: 'MDE', name: 'Medellín - José María Córdova', distance: 2998, flightTime: 6.33 },
-        
+
         // New destinations
+            { code: 'MDE', name: 'Medellín - José María Córdova', distance: 2998, flightTime: 6.33, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'BOG' , name: 'Bogotá - El Dorado', distance: 3128, flightTime: 6.38, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'CLO', name: 'Cali - Alfonso Bonilla Aragón', distance: 3015, flightTime: 6.36, showFromDateUTC: '2025-09-01T00:00:00Z' },
+            { code: 'CTG', name: 'Cartagena - Rafael Núñez', distance: 2785, flightTime: 6.25, showFromDateUTC: '2025-09-01T00:00:00Z' } //added
         ]},
 
     'KMCO': {
@@ -329,7 +349,9 @@ const airports = {
             { code: 'MDE', name: 'Medellín - José María Córdova', distance: 1436, flightTime: 3.16 },
         // New destinations
             { code: 'BOG', name: 'Bogotá - El Dorado', distance: 1556, flightTime: 3.23, showFromDateUTC: '2025-09-01T00:00:00Z' },
-            { code: 'CTG', name: 'Cartagena - Rafael Núñez', distance: 1176, flightTime: 2.43, showFromDateUTC: '2025-09-01T00:00:00Z' }
+            { code: 'CLO', name: 'Cali - Alfonso Bonilla Aragón', distance: 1500, flightTime: 3.2, showFromDateUTC: '2025-09-01T00:00:00Z' }, // added
+            { code: 'CTG', name: 'Cartagena - Rafael Núñez', distance: 1176, flightTime: 2.43, showFromDateUTC: '2025-09-01T00:00:00Z' },
+            { code: 'ADZ', name: 'San Andrés - Gustavo Rojas Pinilla', distance: 1101, flightTime: 2.36, showFromDateUTC: '2025-09-01T00:00:00Z' } // added
         ]},
 
     'KMIA': {
@@ -343,9 +365,10 @@ const airports = {
             { code: 'CLO', name: 'Cali - Alfonso Bonilla Aragón', distance: 1375, flightTime: 3.14, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'CTG', name: 'Cartagena - Rafael Núñez', distance: 992, flightTime: 3.28, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'BAQ', name: 'Barranquilla - Ernesto Cortissoz', distance: 978, flightTime: 2.27, showFromDateUTC: '2025-09-01T00:00:00Z' },
-            { code: 'PEI', name: 'Pereira - Matecaña', distance: 1332, flightTime: 3.08, showFromDateUTC: '2025-09-01T00:00:00Z' }
+            { code: 'PEI', name: 'Pereira - Matecaña', distance: 1332, flightTime: 3.08, showFromDateUTC: '2025-09-01T00:00:00Z' },
+            { code: 'ADZ', name: 'San Andrés - Gustavo Rojas Pinilla', distance: 1040, flightTime: 2.39, showFromDateUTC: '2025-09-01T00:00:00Z' } // added
         ]},
-/*
+
     'LEBL': {
         name: 'Barcelona - El Prat',
         coords: [41.2974, 2.0833],
@@ -355,7 +378,7 @@ const airports = {
             { code: 'BOG', name: 'Bogotá - El Dorado', distance: 4684, flightTime: 9.58, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'CLO', name: 'Cali - Alfonso Bonilla Aragón', distance: 4947, flightTime: 10.50, showFromDateUTC: '2025-09-01T00:00:00Z' },
         ]},   
-*/
+
     'LEMD': {
         name: 'Madrid - Barajas',
         coords: [40.4936, -3.5668],
@@ -401,7 +424,7 @@ const airports = {
             { code: 'BOG', name: 'Bogotá - El Dorado', distance: 1282, flightTime: 3.11, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'CLO', name: 'Cali - Alfonso Bonilla Aragón', distance: 1228, flightTime: 3.10, showFromDateUTC: '2025-09-01T00:00:00Z' }
         ]},
-/*
+
     'MPTO': {
         name: 'Panamá - Tocumen International',
         coords: [9.0701, -79.3850],
@@ -413,11 +436,14 @@ const airports = {
             { code: 'BGA', name: 'Bucaramanga - Palonegro', distance: 438, flightTime: 1.11, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'BAQ', name: 'Barranquilla - Ernesto Cortissoz', distance: 300, flightTime: 0.53, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'CUC', name: 'Cúcuta - Camilo Daza', distance: 483, flightTime: 1.25, showFromDateUTC: '2025-09-01T00:00:00Z' },
+            { code: 'CTG', name: 'Cartagena - Rafael Núñez', distance: 600, flightTime: 1.28, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'MTR', name: 'Montería - Los Garzones', distance: 253, flightTime: 0.50, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'PEI', name: 'Pereira - Matecaña', distance: 351, flightTime: 1, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'SMR', name: 'Santa Marta - Simón Bolívar', distance: 334, flightTime: 1.11, showFromDateUTC: '2025-09-01T00:00:00Z' },
+
+            { code: 'IST', name: 'Istanbul - Istanbul Airport', distance: 10500, flightTime: 12.5, showFromDateUTC: '2025-09-01T00:00:00Z' } // Added
         ]},
-*/
+
     'SAEZ': {
         name: 'Buenos Aires - Ministro Pistarini',
         coords: [-34.8222, -58.5358],
@@ -445,9 +471,10 @@ const airports = {
             { code: 'MDE', name: 'Medellín - José María Córdova', distance: 1150, flightTime: 2.53 },
             { code: 'BOG', name: 'Bogotá - El Dorado', distance: 1121, flightTime: 2.46 },
         // New destinations
-            { code: 'CLO', name: 'Cali - Alfonso Bonilla Aragón', distance: 993, flightTime: 2.33, showFromDateUTC: '2025-09-01T00:00:00Z' }
+            { code: 'CLO', name: 'Cali - Alfonso Bonilla Aragón', distance: 993, flightTime: 2.33, showFromDateUTC: '2025-09-01T00:00:00Z' },
+            { code: 'CUZ', name: 'Cusco - Alejandro Velasco Astete', distance: 878, flightTime: 2.21, showFromDateUTC: '2025-09-01T00:00:00Z' }// added
     ]},
-/*
+
     'SVMI': {
         name: 'Caracas - Simón Bolívar International',
         coords: [10.5981, -66.9912],
@@ -482,7 +509,38 @@ const airports = {
             { code: 'PEI', name: 'Pereira - Matecaña', distance: 835, flightTime: 2, showFromDateUTC: '2025-09-01T00:00:00Z' },
             { code: 'SMR', name: 'Santa Marta - Simón Bolívar', distance: 629, flightTime: 1.45, showFromDateUTC: '2025-09-01T00:00:00Z' }
         ]
-    }*/
+    },
+
+    'SPZO': {
+        name: 'Cuzco - Alejandro Velasco Astete',
+        coords: [-13.5361, -71.9386],
+        destinations: [
+        // New destinations
+
+            { code: 'CUZ', name: 'Cusco - Alejandro Velasco Astete', distance: 0, flightTime: 0, showFromDateUTC: '2025-09-01T00:00:00Z' }, // Added
+            { code: 'MDE', name: 'Medellín - José María Córdova', distance: 1080, flightTime: 2.45, showFromDateUTC: '2025-09-01T00:00:00Z' },// Added
+            { code: 'BOG', name: 'Bogotá - El Dorado', distance: 1051, flightTime: 2.38, showFromDateUTC: '2025-09-01T00:00:00Z' },// Added
+            { code: 'CLO', name: 'Cali - Alfonso Bonilla Aragón', distance: 923, flightTime: 2.25, showFromDateUTC: '2025-09-01T00:00:00Z' } // Added
+        ]},
+
+    'OMDB': {
+        name: 'Dubai - Dubai International',
+        coords: [25.2530, 55.3674],
+        destinations: [
+        // New destinations
+            { code: 'MDE', name: 'Medellín - José María Córdova', distance: 13000, flightTime: 16, showFromDateUTC: '2025-09-01T00:00:00Z' },// Added
+            { code: 'BOG', name: 'Bogotá - El Dorado', distance: 12900, flightTime: 15.5, showFromDateUTC: '2025-09-01T00:00:00Z' },// Added
+            { code: 'CLO', name: 'Cali - Alfonso Bonilla Aragón', distance: 13100, flightTime: 16, showFromDateUTC: '2025-09-01T00:00:00Z' } // Added
+        ]},
+    
+    'LFPG': {
+        name: 'Paris - Charles de Gaulle',
+        coords: [49.0085, 2.5510],
+        destinations: [
+        // New destinations
+            { code: 'MDE', name: 'Medellín - José María Córdova', distance: 5200, flightTime: 11.2, showFromDateUTC: '2025-09-01T00:00:00Z' },// Added
+            { code: 'BOG', name: 'Bogotá - El Dorado', distance: 5100, flightTime: 10.8, showFromDateUTC: '2025-09-01T00:00:00Z' },// Added
+        ]}
 };
 
 let map;
